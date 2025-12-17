@@ -1,5 +1,5 @@
 interface IMegabyte {
-   convertToMb(): number;
+   convertToMb: () => number;
 }
 
 //========
@@ -20,10 +20,6 @@ export class KbToMbAdapter implements IMegabyte {
    private kbStorage: Kilobyte;
 
    constructor(kbStorage: Kilobyte) {
-      if (!(kbStorage instanceof Kilobyte)) {
-         throw new Error("Ошибка: ожидается объект типа Kilobyte");
-      }
-
       this.kbStorage = kbStorage;
    }
 

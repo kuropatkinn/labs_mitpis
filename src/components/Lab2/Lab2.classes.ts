@@ -1,5 +1,5 @@
 interface ICar {
-   moving(): string;
+   moving: () => string;
 }
 
 //========
@@ -32,10 +32,6 @@ export class CameraAdapter implements ICar {
    private camera: Camera;
 
    constructor(cameraInstance: Camera) {
-      if (!(cameraInstance instanceof Camera)) {
-         throw new Error("Ошибка: ожидается объект типа Camera");
-      }
-
       this.camera = cameraInstance;
    }
 
