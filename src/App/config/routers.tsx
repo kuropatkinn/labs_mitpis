@@ -10,7 +10,7 @@ import {
    Lab9,
 } from "../../components";
 
-export const routers = [
+export const labsRouter = [
    {
       path: "/lab1",
       label: "Лабораторная работа №1",

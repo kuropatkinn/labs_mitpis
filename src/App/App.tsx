@@ -5,12 +5,15 @@ import { BrowserRouter } from "react-router-dom";
 import { ConfigProvider } from "antd";
 
 import Router from "./Router";
+import Layout from "./Layout";
 
 const App = (): ReactElement => {
    return (
       <BrowserRouter>
          <ConfigProvider>
-            <Router />
+            <Layout>
+               <Router />
+            </Layout>
          </ConfigProvider>
       </BrowserRouter>
    );

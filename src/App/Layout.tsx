@@ -9,16 +9,18 @@ const Layout = (props: PropsWithChildren): ReactElement => {
    const navigate = useNavigate();
 
    return (
-      <Flex vertical>
-         <Button
-            type="primary"
-            size="large"
-            icon={<ArrowLeftOutlined />}
-            onClick={() => navigate("/")}
-            style={{ width: "150px" }}
-         >
-            Назад
-         </Button>
+      <Flex vertical style={{ margin: "24px 40px" }}>
+         {window.location.pathname !== "/" && (
+            <Button
+               type="primary"
+               size="large"
+               icon={<ArrowLeftOutlined />}
+               onClick={() => navigate("/")}
+               style={{ width: "150px" }}
+            >
+               Назад
+            </Button>
+         )}
          {props.children}
       </Flex>
    );
