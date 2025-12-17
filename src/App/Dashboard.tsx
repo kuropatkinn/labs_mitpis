@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Flex, Typography } from "antd";
 import { DesktopOutlined } from "@ant-design/icons";
 
-import { routers } from "./config/routers";
+import { labsRouter } from "./config/routers";
 
 const Dashboard = (): ReactElement => {
    const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Dashboard = (): ReactElement => {
             Лабораторные работы по предмету МиТПИС (Куропаткин А.М.)
          </Typography.Title>
          <Flex gap="16px" wrap>
-            {routers.map((elem) => (
+            {labsRouter.map((elem) => (
                <Button
                   type="primary"
                   size="large"
