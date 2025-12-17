@@ -49,11 +49,11 @@ const Lab1 = (): ReactElement => {
                      prefix="КБ"
                      allowClear
                   />
-                  <Typography>
+                  <Typography.Text type={isErrorText ? "danger" : undefined}>
                      {isErrorText
                         ? "Введите корректное значение"
                         : `Результат: ${mbData.convertToMb()} мегабайт`}
-                  </Typography>
+                  </Typography.Text>
                </Flex>
             </Flex>
          </Card>
