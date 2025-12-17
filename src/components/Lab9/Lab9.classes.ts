@@ -9,11 +9,15 @@ class Decorations implements IChristmasTree {
    constructor(size: string, color: string) {
       this.size = size;
       this.color = color;
-      console.log(`[Flyweight Создан]: Размер '${size}' с цветом '${color}'`);
+      console.log(
+         `[Flyweight: Украшение создано]: Размер '${this.size}', цвет '${this.color}'`
+      );
    }
 
    hang(countBranch: number) {
-      return `Повесили украшение на ${countBranch} ветку на елке!`;
+      const message = `Повесили украшение на ${countBranch} ветку!`;
+      console.log(message);
+      return message;
    }
 }
 
@@ -25,7 +29,7 @@ export class DecorationsFactory {
 
       if (this.flyweights.has(key)) {
          console.log(
-            `[Фабрика]: Возвращаем существующий легковес для ключа: ${key}`
+            `[Фабрика DecorationsFactory]: Возвращаем существующий легковес для ключа: ${key}`
          );
          return this.flyweights.get(key)!;
       }
