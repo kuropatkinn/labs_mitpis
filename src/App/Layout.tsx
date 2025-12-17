@@ -12,6 +12,7 @@ const Layout = (props: PropsWithChildren): ReactElement => {
       <Flex vertical>
          <Button
             type="primary"
+            size="large"
             icon={<ArrowLeftOutlined />}
             onClick={() => navigate("/")}
             style={{ width: "150px" }}

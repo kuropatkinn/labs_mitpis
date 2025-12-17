@@ -1,8 +1,10 @@
-interface MegabyteInterface {
+interface IMegabyte {
    convertToMb(): number;
 }
 
-export class KilobyteStorage {
+//========
+
+export class Kilobyte {
    private kb: number;
 
    constructor(kilobytes: number) {
@@ -14,12 +16,12 @@ export class KilobyteStorage {
    }
 }
 
-export class KbToMbAdapter implements MegabyteInterface {
-   private kbStorage: KilobyteStorage;
+export class KbToMbAdapter implements IMegabyte {
+   private kbStorage: Kilobyte;
 
-   constructor(kbStorage: KilobyteStorage) {
-      if (!(kbStorage instanceof KilobyteStorage)) {
-         throw new Error("Ошибка: ожидается объект типа KilobyteStorage");
+   constructor(kbStorage: Kilobyte) {
+      if (!(kbStorage instanceof Kilobyte)) {
+         throw new Error("Ошибка: ожидается объект типа Kilobyte");
       }
 
       this.kbStorage = kbStorage;

@@ -19,6 +19,7 @@ const Dashboard = (): ReactElement => {
             {routers.map((elem) => (
                <Button
                   type="primary"
+                  size="large"
                   onClick={() => navigate(elem.path)}
                   icon={<DesktopOutlined />}
                >

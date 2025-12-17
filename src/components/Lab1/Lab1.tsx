@@ -2,13 +2,13 @@ import { useState, type ReactElement } from "react";
 
 import { Flex, Typography, Card, Input } from "antd";
 
-import { KbToMbAdapter, KilobyteStorage } from "./Lab1.classes";
+import { KbToMbAdapter, Kilobyte } from "./Lab1.classes";
 
 const Lab1 = (): ReactElement => {
    const [valueKb, setValueKb] = useState<number | null>(null);
    const [isErrorText, setIsErrorText] = useState(false);
 
-   const kbData = new KilobyteStorage(valueKb as number);
+   const kbData = new Kilobyte(valueKb as number);
    const mbData = new KbToMbAdapter(kbData);
 
    const handleChangeInput = (value: string) => {
