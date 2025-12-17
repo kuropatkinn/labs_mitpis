@@ -9,7 +9,7 @@ const Layout = (props: PropsWithChildren): ReactElement => {
    const navigate = useNavigate();
 
    return (
-      <Flex vertical style={{ margin: "24px 40px" }}>
+      <Flex vertical style={{ margin: "24px 48px" }}>
          {window.location.pathname !== "/" && (
             <Button
                type="primary"
