@@ -16,11 +16,10 @@ export class SecurityProxyScooter {
    }
 
    start(sum: number) {
-      if (sum === 100) {
+      if (sum >= 100) {
          return this.scooter.start();
       } else {
-         if (sum > 100) throw new Error("Превышение суммы проката!");
-         else if (sum < 100) throw new Error("Недостаточно средств!");
+         if (sum < 100) throw new Error("Недостаточно средств!");
          else throw new Error("Ошибка при аренде самоката!");
       }
    }
